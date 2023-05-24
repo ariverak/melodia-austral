@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config();
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Melodia Austral`,
@@ -12,10 +14,15 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "9JZV8hDZHQ70HBY2KuaQRpPGygpCco7F6nodkDFFnnI",
-      "spaceId": ""
+      "accessToken": process.env.CONTENTFULL_ACCESS_TOKEN || "",
+      "spaceId": process.env.CONTENTFULL_SPACE_ID || "",
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  },{
+    resolve: "gatsby-plugin-google-gtag",
+    options: {
+      trackingIds: [],
+    }
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-postcss", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
