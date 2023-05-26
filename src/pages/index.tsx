@@ -11,7 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
             Melodia Austral
           </h1>
           <p className='mb-8 text-lg font-normal text-gray-5  00 lg:text-xl sm:px-16 lg:px-48'>
-            Bienvenido a Melodia Austral
+            Bienvenido a Melodia AustraL
           </p>
         </div>
       </section>
