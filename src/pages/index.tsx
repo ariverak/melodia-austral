@@ -11,8 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
             Melodia Austral
           </h1>
           <p className='mb-8 text-lg font-normal text-gray-5  00 lg:text-xl sm:px-16 lg:px-48'>
-            Here at Flowbite we focus on markets where technology, innovation,
-            and capital can unlock long-term value and drive economic growth.
+            BIENVENIDO A MELODIA AUSTRAL
           </p>
         </div>
       </section>
